@@ -1,0 +1,205 @@
+/* ==========================================================================
+   CSS RESPONSIVE (MEDIA QUERIES) CHO TOÀN BỘ WEBSITE MWC SHOP
+   Hỗ trợ: Desktop (>= 1024px), Tablet (768px - 1023px), Mobile (< 768px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET & LAPTOP NHỎ (Max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  /* Container chung */
+  .container,
+  .header-container,
+  .cart-main-container,
+  .auth-wrapper {
+    max-width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Header & Menu */
+  .nav-menu {
+    gap: 12px;
+  }
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  /* Khung sản phẩm 4 cột chuyển thành 3 cột */
+  .product-grid-4,
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MÁY TÍNH BẢNG (Max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  /* --- A. HEADER & MENU --- */
+  .header-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    display: flex;
+    overflow-x: auto; /* Cho phép vuốt ngang các mục menu trên điện thoại */
+    white-space: nowrap;
+    padding-bottom: 8px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn cho mượt */
+  }
+
+  .search-box {
+    width: 160px;
+  }
+
+  /* --- B. TRANG CHỦ & TRANG DANH SÁCH SẢN PHẨM --- */
+  /* Chuyển lưới sản phẩm thành 2 cột */
+  .product-grid-4,
+  .product-grid,
+  .banchay-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .products-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* --- C. TRANG GIỎ HÀNG & MUA HÀNG (cart.html) --- */
+  .cart-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cart-table th,
+  .cart-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .cart-item-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-summary-section {
+    width: 100%; /* Giảm chiều rộng tổng tiền về full màn hình */
+    margin-top: 20px;
+  }
+
+  /* Form vận chuyển chuyển thành 1 cột */
+  .form-row.flex-2,
+  .form-row.flex-3 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-order {
+    width: 100%;
+  }
+
+  /* --- D. TRANG ĐĂNG NHẬP & ĐĂNG KÝ (login.html) --- */
+  .auth-container {
+    flex-direction: column; /* Chuyển 2 cột Đăng nhập & Đăng ký thành 1 cột dọc */
+    gap: 30px;
+  }
+
+  .auth-box {
+    padding: 0;
+  }
+
+  /* Vạch chia "Or" chuyển từ dọc thành ngang */
+  .center-divider {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+  }
+
+  .center-divider .line {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+  }
+
+  .center-divider .or-circle {
+    background: #fff;
+  }
+
+  /* --- E. TRANG CHI TIẾT SẢN PHẨM (detail.html) --- */
+  .product-detail-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-gallery,
+  .product-info-col {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. ĐIỆN THOẠI MÀN HÌNH NHỎ (Max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .search-box {
+    display: none; /* Ẩn ô tìm kiếm trên màn hình cực nhỏ để đỡ chật */
+  }
+
+  /* Lưới sản phẩm 2 cột siêu gọn */
+  .product-grid-4,
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  .product-title {
+    font-size: 12px;
+    height: 32px;
+    overflow: hidden;
+  }
+
+  /* Phân trang gọn lại */
+  .pagination-wrapper {
+    gap: 4px;
+  }
+
+  .page-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  /* Nút đăng nhập MXH xếp dọc */
+  .social-login {
+    flex-direction: column;
+  }
+}

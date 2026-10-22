@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MWC Shop - Giày Nam, Giày Nữ, Balo & Phụ Kiện Thời Trang</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- File CSS -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- 1. HEADER -->
+    <header class="site-header">
+      <div class="header-container container">
+        <a href="index.html">
+          <img src="../IMG/logo.png" class="logo" alt="Logo MWC" />
+        </a>
+        <!-- Menu liên kết nhanh đến từng danh mục -->
+        <nav class="main-nav">
+          <ul>
+            <li class="has-dropdown">
+              <a href="#caogot">GIÀY CAO GÓT</a>
+            </li>
+            <li class="has-dropdown">
+              <a href="#sandal-nu">GIÀY NỮ</a>
+            </li>
+            <li><a href="#charm">DÉP CHARM</a></li>
+            <li><a href="#sandal-nam">GIÀY NAM</a></li>
+            <li><a href="#balo">BALO - TÚI</a></li>
+            <li><a href="#banchay">BÁN CHẠY</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-right">
+          <div class="search-box">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm kiếm sản phẩm..."
+              autocomplete="off"
+            />
+            <button type="button" id="btn-search" title="Tìm kiếm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <!-- Hộp gợi ý kết quả tìm kiếm nhanh -->
+            <div class="search-dropdown" id="search-dropdown" hidden></div>
+          </div>
+          <a href="account.html" class="user-icon" title="Tài khoản"
+            ><i class="fa-regular fa-user"></i
+          ></a>
+          <!-- Biểu tượng giỏ hàng & Số lượng cập nhật từ JS -->
+          <a href="cart.html" class="cart-icon" title="Giỏ hàng">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main class="main-content">
+      <!-- BANNER HERO -->
+      <!-- BANNER HERO FULL-WIDTH TỰ ĐỘNG CHẠY -->
+
+      <!-- BANNER HERO - LUXURY FASHION -->
+      <section class="luxury-banner-section">
+        <div class="luxury-banner" id="luxuryBanner">
+          <!-- Slide 1 -->
+          <div class="luxury-slide active">
+            <div class="luxury-slide-bg">
+              <img src="../IMG/header/banner1.jpg" alt="MWC Fashion Collection 1" />
+            </div>
+            <div class="luxury-overlay"></div>
+            <div class="luxury-content">
+              <div class="luxury-subtitle">MWC FASHION COLLECTION</div>
+              <h1 class="luxury-title">Phong Cách <span>Thời Thượng</span></h1>
+              <p class="luxury-desc">
+                Khám phá những mẫu giày và phụ kiện thời trang hiện đại, giúp bạn tự tin thể hiện cá
+                tính trong mọi khoảnh khắc.
+              </p>
+              <a href="#banchay" class="luxury-btn">
+                KHÁM PHÁ NGAY
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="luxury-slide">
+            <div class="luxury-slide-bg">
+              <img src="../IMG/header/banner2.jpg" alt="MWC Fashion Collection 2" />
+            </div>
+            <div class="luxury-overlay"></div>
+            <div class="luxury-content">
+              <div class="luxury-subtitle">NEW ARRIVALS</div>
+              <h1 class="luxury-title">Dấu Ấn <span>Riêng Bạn</span></h1>
+              <p class="luxury-desc">
+                Từ giày nữ thanh lịch đến sandal năng động, lựa chọn phong cách phù hợp với cá tính
+                của riêng bạn.
+              </p>
+              <a href="#sandal-nu" class="luxury-btn">
+                KHÁM PHÁ BỘ SƯU TẬP
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="luxury-slide">
+            <div class="luxury-slide-bg">
+              <img src="../IMG/header/banner3.jpg" alt="MWC Fashion Collection 3" />
+            </div>
+            <div class="luxury-overlay"></div>
+            <div class="luxury-content">
+              <div class="luxury-subtitle">STYLE YOUR WAY</div>
+              <h1 class="luxury-title">Tự Tin <span>Khác Biệt</span></h1>
+              <p class="luxury-desc">
+                Hoàn thiện phong cách mỗi ngày với những thiết kế thời trang trẻ trung, tiện dụng và
+                đầy cá tính.
+              </p>
+              <a href="#balo" class="luxury-btn">
+                XEM SẢN PHẨM
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Thumbnail chuyển slide -->
+          <div class="luxury-controls">
+            <div class="luxury-thumbnails" id="luxuryThumbnails">
+              <button
+                class="luxury-thumb active"
+                type="button"
+                data-index="0"
+                aria-label="Xem banner 1"
+              >
+                <img src="../IMG/header/banner1.jpg" alt="Banner 1" />
+              </button>
+              <button class="luxury-thumb" type="button" data-index="1" aria-label="Xem banner 2">
+                <img src="../IMG/header/banner2.jpg" alt="Banner 2" />
+              </button>
+              <button class="luxury-thumb" type="button" data-index="2" aria-label="Xem banner 3">
+                <img src="../IMG/header/banner3.jpg" alt="Banner 3" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Thanh tiến trình -->
+          <div class="luxury-progress-container">
+            <div class="luxury-progress" id="luxuryProgress"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: SẢN PHẨM BÁN CHẠY -->
+      <section class="product-section container" id="banchay">
+        <h2 class="section-title">SẢN PHẨM BÁN CHẠY</h2>
+        <div class="product-layout-featured">
+          <div class="featured-banner">
+            <img src="../IMG/1.jpg" alt="Sản phẩm bán chạy" />
+          </div>
+          <!-- JS sẽ bơm dữ liệu vào div này -->
+          <div class="product-grid-3" id="banchay-container"></div>
+        </div>
+        <div class="view-all-box">
+          <a href="products.html?category=banchay" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: GIÀY CAO GÓT NỮ -->
+      <section class="product-section container" id="caogot">
+        <h2 class="section-title">GIÀY CAO GÓT NỮ</h2>
+        <div class="product-grid-4" id="caogot-container"></div>
+        <div class="view-all-box">
+          <a href="products.html?category=caogot" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: BALO THỜI TRANG -->
+      <section class="product-section container" id="balo">
+        <h2 class="section-title">BALO THỜI TRANG</h2>
+        <div class="product-grid-4" id="balo-container"></div>
+        <div class="view-all-box">
+          <a href="products.html?category=balo" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: DÉP VÀ SANDAL NỮ -->
+      <section class="product-section container" id="sandal-nu">
+        <h2 class="section-title">DÉP VÀ SANDAL NỮ</h2>
+        <div class="product-grid-4" id="sandal-nu-container"></div>
+        <div class="view-all-box">
+          <a href="products.html?category=sandal-nu" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: DÉP CHARM -->
+      <section class="product-section container" id="charm">
+        <h2 class="section-title">DÉP CHARM</h2>
+        <div class="product-grid-4" id="charm-container"></div>
+        <div class="view-all-box">
+          <a href="products.html?category=charm" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: SANDAL VÀ DÉP NAM -->
+      <section class="product-section container" id="sandal-nam">
+        <h2 class="section-title">SANDAL VÀ DÉP NAM</h2>
+        <div class="product-grid-4" id="sandal-nam-container"></div>
+        <div class="view-all-box">
+          <a href="products.html?category=sandal-nam" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+
+      <!-- SECTION: TIN TỨC / BLOG -->
+      <section class="blog-links-section container">
+        <h2 class="section-title">TIN TỨC MỚI NHẤT</h2>
+        <div class="blog-grid" id="blog-container"></div>
+        <div class="view-all-box">
+          <a href="#" class="btn-view-all">XEM TẤT CẢ</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top container">
+        <div class="footer-col">
+          <h4>GỌI MUA HÀNG ONLINE (08:00 - 21:00)</h4>
+          <p class="hotline-number">1900.633.349</p>
+          <p class="sub-text">Tất cả các ngày trong tuần (Trừ Tết Âm Lịch)</p>
+
+          <h4 style="margin-top: 20px">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</h4>
+          <p class="hotline-number">1900.633.349</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THÔNG TIN</h4>
+          <ul>
+            <li><a href="#">Giới thiệu về MWC</a></li>
+            <li><a href="#">Điều kiện giao dịch chung</a></li>
+            <li><a href="#">Chính sách và quy định</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="#">Chính sách vận chuyển</a></li>
+            <li><a href="#">Chính sách thanh toán</a></li>
+            <li><a href="#">Chính sách đổi trả & bảo hành</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="store-system-title">
+            <h3>HỆ THỐNG CỬA HÀNG</h3>
+            <p><a href="#">Xem địa chỉ hệ thống cửa hàng trên toàn quốc</a></p>
+          </div>
+          <hr class="footer-divider" />
+          <div class="company-info">
+            <div>
+              <p><strong>HỘ KINH DOANH SHOP GIÀY MWC</strong></p>
+              <p>Địa chỉ: 214/14 Nguyễn Trãi, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh</p>
+            </div>
+            <div class="gov-badge">
+              <img src="images/da-thong-bao-bo-cong-thuong.png" alt="Bộ Công Thương" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- NÚT LIÊN HỆ CỐ ĐỊNH -->
+    <a href="#" class="floating-contact-btn"><i class="fa-solid fa-phone"></i></a>
+
+    <!-- LƯU Ý: Nhúng file data.js trước, app.js sau -->
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
